@@ -4,8 +4,11 @@
   "description": "Website for the Yale Women's Center",
   "main": "postcss.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+        "dev:assets": "webpack --watch",
+        "dev:start": "live-server --open=./public/ --host=localhost --watch=./public/ ",
+        "dev": "npm-run-all -p dev:*",
+        "build": "cross-env NODE_ENV=production webpack"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Open-Source-Yale/website.git"
